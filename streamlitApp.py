@@ -14,7 +14,7 @@ df2 = pd.read_csv('sprint_wise_story_info.csv')
 
 st.sidebar.title('User Story Analysis')
 
-option = st.sidebar.selectbox('Select Any One', ['Top Scorer', 'Group Bar Plot', 'Highest Sprint grosser'])
+option = st.sidebar.selectbox('Select Any One', ['Top Scorer', 'Group Bar Plot', 'Highest Sprint grosser', 'Top 2 Story'])
 
 # 1. Top employee of 2022 : Total story points obtained by every individuals
 if option == 'Top Scorer':
@@ -62,3 +62,23 @@ elif option == 'Highest Sprint grosser':
 
         st.write('Data Analysis')
         st.write(sprint_max)
+
+# 4.Show top 2 highest story points for story title for all individuals
+elif option == 'Top 2 Story':
+    st.sidebar.selectbox('Select individual', ['Showing Top 2 Story'])
+    btn4 = st.sidebar.button('Find Details')
+    if btn4:
+        st.title('Show top 2 highest story points for story title for all individuals')
+        top2_rs_df = df1[df1['name'] == 'RS'].groupby(['name', 'story_name'])['story_points'].sum().sort_values(
+            ascending=False).reset_index().head(2)
+        top2_pd_df = df1[df1['name'] == 'PD'].groupby(['name', 'story_name'])['story_points'].sum().sort_values(
+            ascending=False).reset_index().head(2)
+        top2_jp_df = df1[df1['name'] == 'JP'].groupby(['name', 'story_name'])['story_points'].sum().sort_values(
+            ascending=False).reset_index().head(2)
+
+        top2_story_name = top2_rs_df.append(top2_pd_df, ignore_index=True).append(top2_jp_df, ignore_index=True)
+
+        st.write('Bar Chart')
+        st.bar_chart(top2_story_name, x='name', y='story_points', use_container_width=True)
+        st.write('Maximum Story Points Obtained in top 2 story')
+        st.write(top2_story_name)
