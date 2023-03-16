@@ -15,7 +15,7 @@ df2 = pd.read_csv('sprint_wise_story_info.csv')
 st.sidebar.title('User Story Analysis')
 
 option = st.sidebar.selectbox('Select Any One', ['Top Scorer', 'Group Bar Plot', 'Highest Sprint grosser', 'Top 2 Story',
-                                                 'Tech-Func Story Expert'])
+                                                 'Tech-Func Story Expert', 'Alert-Monitoring Story Expert'])
 
 # 1. Top employee of 2022 : Total story points obtained by every individuals
 if option == 'Top Scorer':
@@ -87,8 +87,8 @@ elif option == 'Top 2 Story':
 # 5.Show maximum story points in Tech and func spec for all individuals
 elif option == 'Tech-Func Story Expert':
     st.sidebar.selectbox('Select individual', ['Sum of Tech_cum_Func_Spec'])
-    btn4 = st.sidebar.button('Find Details')
-    if btn4:
+    btn5 = st.sidebar.button('Find Details')
+    if btn5:
         st.title('Show maximum story points in Tech and func spec for all individuals')
 
         tech_df = df1[df1['story_name'] == 'Tech Spec'].groupby(['name', 'story_name'])[
@@ -109,3 +109,30 @@ elif option == 'Tech-Func Story Expert':
 
         st.write('Showing dataframe')
         st.write(tech_func_df)
+
+# 6.Show maximum story points for alerting and Monitoring
+elif option == 'Alert-Monitoring Story Expert':
+    st.sidebar.selectbox('Select individual', ['Sum of Alerting_cum_Monitoring_Story'])
+    btn6 = st.sidebar.button('Find Details')
+    if btn6:
+        st.title('Show maximum story points for alerting and Monitoring')
+
+        alert_df = df1[df1['story_name'] == 'Alerting'].groupby(['name', 'story_name'])[
+            'story_points'].sum().reset_index().sort_values(by='story_points', ascending=False)
+        monitor_df = df1[df1['story_name'] == 'Monitoring'].groupby(['name', 'story_name'])[
+            'story_points'].sum().reset_index().sort_values(by='story_points', ascending=False)
+
+        alert_monitor_df = alert_df.append(monitor_df, ignore_index=True).groupby('name')[
+            'story_points'].sum().reset_index().sort_values(by='story_points', ascending=False)
+
+        st.write('Data Vizualized')
+        fig1, ax1 = plt.subplots()
+        ax1.pie(alert_monitor_df['story_points'], labels=alert_monitor_df['name'], autopct='%1.1f%%',
+                shadow=True, startangle=90)
+        ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+
+        st.pyplot(fig1)
+
+        st.write('Showing dataframe')
+        st.write(alert_monitor_df)
+
