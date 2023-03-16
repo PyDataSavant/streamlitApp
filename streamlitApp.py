@@ -14,7 +14,8 @@ df2 = pd.read_csv('sprint_wise_story_info.csv')
 
 st.sidebar.title('User Story Analysis')
 
-option = st.sidebar.selectbox('Select Any One', ['Top Scorer', 'Group Bar Plot', 'Highest Sprint grosser', 'Top 2 Story'])
+option = st.sidebar.selectbox('Select Any One', ['Top Scorer', 'Group Bar Plot', 'Highest Sprint grosser', 'Top 2 Story',
+                                                 'Tech-Func Story Expert'])
 
 # 1. Top employee of 2022 : Total story points obtained by every individuals
 if option == 'Top Scorer':
@@ -82,3 +83,29 @@ elif option == 'Top 2 Story':
         st.bar_chart(top2_story_name, x='name', y='story_points', use_container_width=True)
         st.write('Maximum Story Points Obtained in top 2 story')
         st.write(top2_story_name)
+
+# 5.Show maximum story points in Tech and func spec for all individuals
+elif option == 'Tech-Func Story Expert':
+    st.sidebar.selectbox('Select individual', ['Sum of Tech_cum_Func_Spec'])
+    btn4 = st.sidebar.button('Find Details')
+    if btn4:
+        st.title('Show maximum story points in Tech and func spec for all individuals')
+
+        tech_df = df1[df1['story_name'] == 'Tech Spec'].groupby(['name', 'story_name'])[
+            'story_points'].sum().reset_index().sort_values(by='story_points', ascending=False)
+        func_df = df1[df1['story_name'] == 'Functional'].groupby(['name', 'story_name'])[
+            'story_points'].sum().reset_index().sort_values(by='story_points', ascending=False)
+
+        tech_func_df = tech_df.append(func_df, ignore_index=True).groupby('name')[
+            'story_points'].sum().reset_index().sort_values(by='story_points', ascending=False)
+
+        st.write('Data Vizualized')
+        fig1, ax1 = plt.subplots()
+        ax1.pie(tech_func_df['story_points'], labels=tech_func_df['name'], autopct='%1.1f%%',
+                shadow=True, startangle=90)
+        ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+
+        st.pyplot(fig1)
+
+        st.write('Showing dataframe')
+        st.write(tech_func_df)
