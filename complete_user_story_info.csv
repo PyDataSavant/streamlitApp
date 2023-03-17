@@ -1,0 +1,215 @@
+name,story_name,dataset,sprint_id,year,story_points
+RS,Runbook,CE,Sprint 12,2022,2.0
+RS,Runbook,FS,Sprint 12,2022,2.0
+RS,Tech Spec,CE,Sprint 13,2022,2.0
+RS,Alignment,CE,Sprint 13,2022,0.5
+RS,Alerting,CE,Sprint 13,2022,2.0
+RS,Alignment,C-Equip,Sprint 13,2022,0.5
+RS,Alerting,C-Equip,Sprint 13,2022,2.0
+RS,Alerting,FS,Sprint 13,2022,2.0
+RS,Functional,C-Equip,Sprint 13,2022,1.0
+RS,Functional,CE,Sprint 13,2022,1.0
+RS,Tech Spec,C-Equip,Sprint 14,2022,2.0
+RS,Monitoring,C-Equip,Sprint 14,2022,3.0
+RS,Alignment,FS,Sprint 14,2022,0.5
+RS,Runbook,C-Equip,Sprint 14,2022,2.0
+RS,Functional,FS,Sprint 14,2022,1.0
+RS,Review,MA,Sprint 14,2022,0.5
+RS,Runbook,CE,Sprint 14,2022,4.0
+RS,Alignment,SA,Sprint 15,2022,0.5
+RS,Functional,SA,Sprint 15,2022,1.0
+RS,Functional,SABE,Sprint 15,2022,1.0
+RS,Tech Spec,SA,Sprint 15,2022,4.0
+RS,Tech Spec,SABE,Sprint 15,2022,4.0
+RS,Alignment,SABE,Sprint 15,2022,0.5
+RS,Review,RC,Sprint 15,2022,0.5
+RS,Review,SCA,Sprint 15,2022,0.5
+RS,Tech Spec,DD,Sprint 16,2022,2.0
+RS,Runbook,D,Sprint 16,2022,3.0
+RS,Runbook,DABE,Sprint 16,2022,3.0
+RS,Operational,SABE,Sprint 16,2022,0.5
+RS,Runbook,ADLAE,Sprint 16,2022,3.0
+RS,Tech Spec,DDCV,Sprint 16,2022,3.0
+RS,Tech Spec,PC,Sprint 17,2022,4.0
+RS,Tech Spec,ADLE,Sprint 17,2022,4.0
+RS,Runbook,ADLE,Sprint 17,2022,3.0
+RS,Functional,ADLAS,Sprint 17,2022,1.0
+RS,Tech Spec,ADLAS,Sprint 17,2022,5.0
+RS,Runbook,SABE,Sprint 17,2022,3.0
+RS,Functional,ADLE,Sprint 17,2022,1.0
+RS,Alignment,DD,Sprint 18,2022,0.5
+RS,Alerting,DDBE,Sprint 18,2022,0.5
+RS,Monitoring,DDBE,Sprint 18,2022,3.0
+RS,Runbook,ADLAS,Sprint 18,2022,3.0
+RS,Tech Spec,DDBE,Sprint 18,2022,2.0
+RS,Tech Spec,D,Sprint 19,2022,5.0
+RS,Runbook,DABE,Sprint 19,2022,3.0
+RS,Functional,ADLEAS,Sprint 20,2022,1.0
+RS,Tech Spec,ADLEAS,Sprint 20,2022,5.0
+RS,Alerting,DABE,Sprint 20,2022,2.0
+RS,Tech Spec,DDBE,Sprint 20,2022,2.0
+RS,Operational,PC,Sprint 21,2022,0.5
+RS,Functional,AI,Sprint 21,2022,1.0
+RS,Tech Spec,AI,Sprint 21,2022,4.0
+RS,Monitoring,OC,Sprint 21,2022,3.0
+RS,Monitoring,DABE,Sprint 21,2022,3.0
+RS,Update TF,PC,Sprint 21,2022,0.5
+RS,Alerting,CA,Sprint 22,2022,2.0
+RS,Operational,COSCBE,Sprint 22,2022,0.5
+RS,Operational,COM,Sprint 22,2022,0.5
+RS,Monitoring,COM,Sprint 22,2022,3.0
+RS,Transition,COM,Sprint 22,2022,3.0
+RS,Alerting,OCT,Sprint 23,2022,2.0
+RS,Tech Spec,DSP ORG,Sprint 23,2022,6.0
+RS,Tech Spec,RC,Sprint 24,2022,4.0
+RS,Monitoring,COCBE,Sprint 24,2022,2.0
+RS,Review,FS,Sprint 24,2022,0.5
+RS,Alignment,FS,Sprint 24,2022,0.5
+RS,Alerting,FS,Sprint 24,2022,2.0
+RS,Tech Spec,Ind,Sprint 25,2022,4.0
+RS,Functional,CPA,Sprint 25,2022,1.0
+RS,Tech Spec,CPP,Sprint 25,2022,4.0
+RS,Tech Spec,IM,Sprint 26,2022,4.0
+RS,Tech Spec,IMR,Sprint 26,2022,4.0
+PD,None,None,Sprint 12,2022,0.0
+PD,Alerting,MF,Sprint 13,2022,2.0
+PD,Tech Spec,PCR,Sprint 13,2022,2.0
+PD,Alerting,PCR,Sprint 13,2022,2.0
+PD,Functional,MF,Sprint 13,2022,1.0
+PD,Functional,PCR,Sprint 13,2022,1.0
+PD,Tech Spec,MF,Sprint 13,2022,2.0
+PD,Alignment,MF,Sprint 14,2022,0.5
+PD,Alignment,PCR,Sprint 14,2022,0.5
+PD,Monitoring,DDID,Sprint 14,2022,3.0
+PD,Runbook,MF,Sprint 14,2022,2.0
+PD,Runbook,PCR,Sprint 14,2022,3.0
+PD,Monitoring,CA,Sprint 14,2022,3.0
+PD,Functional,ADLAS,Sprint 15,2022,1.0
+PD,Tech Spec,ADLAS,Sprint 15,2022,5.0
+PD,Monitoring,ADLAS,Sprint 15,2022,3.0
+PD,Tech Spec,COP,Sprint 16,2022,5.0
+PD,Tech Spec,DBE,Sprint 16,2022,5.0
+PD,Runbook,DBE,Sprint 16,2022,3.0
+PD,Review,SA,Sprint 16,2022,0.5
+PD,Operational,SA,Sprint 17,2022,0.5
+PD,Functional,ADLED,Sprint 17,2022,1.0
+PD,Tech Spec,ADLED,Sprint 17,2022,5.0
+PD,Functional,ADLPD,Sprint 17,2022,1.0
+PD,Tech Spec,ADLPD,Sprint 17,2022,5.0
+PD,Alignment,ADLAS,Sprint 17,2022,0.5
+PD,Runbook,ADLED,Sprint 18,2022,3.0
+PD,Operational,ADLAS,Sprint 18,2022,1.0
+PD,Transition,ADLAS,Sprint 18,2022,3.0
+PD,Runbook,ADLPD,Sprint 18,2022,2.0
+PD,Functional,ADLAS,Sprint 19,2022,1.0
+PD,Tech Spec,ADLAS,Sprint 19,2022,3.0
+PD,Functional,ADLTL,Sprint 19,2022,1.0
+PD,Tech Spec,ADLTL,Sprint 19,2022,3.0
+PD,Functional,DDBE,Sprint 19,2022,2.5
+PD,Functional,ADLDS,Sprint 20,2022,1.0
+PD,Functional,ADLCA,Sprint 20,2022,1.0
+PD,Tech Spec,ADLCA,Sprint 20,2022,5.0
+PD,Tech Spec,ADLTSL,Sprint 20,2022,3.0
+PD,Tech Spec,ADLADL,Sprint 21,2022,3.0
+PD,Alignment,ADLEAS,Sprint 21,2022,0.5
+PD,Tech Spec,AA-D,Sprint 21,2022,4.0
+PD,Functional,AA-D,Sprint 21,2022,1.0
+PD,Review,UAS,Sprint 21,2022,0.5
+PD,Review,MR,Sprint 21,2022,0.5
+PD,Alerting,CA-EOR,Sprint 22,2022,2.0
+PD,Tech Spec,SP,Sprint 22,2022,3.0
+PD,Tech Spec,AS,Sprint 22,2022,3.0
+PD,Monitoring,COSC,Sprint 22,2022,1.0
+PD,Review,ESMR,Sprint 22,2022,0.5
+PD,Alignment,ADLTL,Sprint 22,2022,0.5
+PD,Functional,AABE,Sprint 22,2022,1.0
+PD,Tech Spec,AABE,Sprint 22,2022,3.0
+PD,Tech Spec,AS,Sprint 23,2022,5.0
+PD,Functional,OCT,Sprint 23,2022,5.0
+PD,Tech Spec,CPE,Sprint 24,2022,4.0
+PD,Review,PCR,Sprint 24,2022,0.5
+PD,Alignment,PCR,Sprint 24,2022,0.5
+PD,Alerting,PCR,Sprint 24,2022,2.0
+PD,Review,CPA,Sprint 25,2022,0.5
+PD,Tech Spec,CPE,Sprint 25,2022,1.0
+PD,Tech Spec,PI,Sprint 25,2022,4.0
+PD,Functional,CPE,Sprint 25,2022,1.0
+PD,Monitoring,Template,Sprint 25,2022,1.0
+PD,Operational,Template,Sprint 25,2022,1.0
+PD,Tech Spec,IMR,Sprint 26,2022,4.0
+PD,Functional,IMR,Sprint 26,2022,1.0
+PD,Review,DESC,Sprint 26,2022,0.5
+PD,Review,DEC,Sprint 26,2022,0.5
+PD,Review,DESCO,Sprint 26,2022,0.5
+JP,Runbook,DD,Sprint 12,2022,2.0
+JP,Runbook,PC,Sprint 12,2022,2.0
+JP,Functional,DD,Sprint 12,2022,1.0
+JP,Alerting,PC,Sprint 13,2022,2.0
+JP,Alerting,DD,Sprint 13,2022,2.0
+JP,Functional,PC,Sprint 13,2022,1.0
+JP,Review,CE,Sprint 13,2022,0.5
+JP,Tech Spec,PC,Sprint 14,2022,4.0
+JP,Alignment,PC,Sprint 14,2022,0.5
+JP,Tech Spec,DD,Sprint 14,2022,4.0
+JP,Alignment,DD,Sprint 14,2022,0.5
+JP,Alignment,WON,Sprint 14,2022,0.5
+JP,Alerting,WON,Sprint 14,2022,2.0
+JP,Alerting,AMAC,Sprint 15,2022,2.0
+JP,Review,CAR,Sprint 15,2022,1.0
+JP,Alerting,CAR,Sprint 15,2022,2.0
+JP,Review,AR,Sprint 15,2022,1.0
+JP,Alignment,AR,Sprint 15,2022,0.5
+JP,Alerting,AR,Sprint 15,2022,2.0
+JP,Alignment,CE,Sprint 15,2022,0.5
+JP,Alerting,CEBE,Sprint 15,2022,2.0
+JP,Review,ADL,Sprint 15,2022,1.0
+JP,Functional,PAA,Sprint 15,2022,0.5
+JP,Alerting,DCOABE,Sprint 16,2022,2.0
+JP,Monitoring,CAR,Sprint 16,2022,3.0
+JP,Monitoring,SCA-CA,Sprint 16,2022,3.0
+JP,Monitoring,PAA,Sprint 16,2022,3.0
+JP,Review,PDCA,Sprint 16,2022,0.5
+JP,Monitoring,MA,Sprint 16,2022,3.0
+JP,Monitoring,PC,Sprint 16,2022,3.0
+JP,Alerting,PAA,Sprint 16,2022,2.0
+JP,Tech Spec,ADLSMH,Sprint 17,2022,5.0
+JP,Monitoring,DCOABE,Sprint 17,2022,3.0
+JP,Monitoring,CEBE,Sprint 17,2022,3.0
+JP,Functional,ADLSMH,Sprint 18,2022,1.0
+JP,Alignment,ADL,Sprint 18,2022,0.5
+JP,Runbook,ADLSMH,Sprint 18,2022,3.0
+JP,Operational,PDCA,Sprint 18,2022,1.0
+JP,Alerting,DD,Sprint 18,2022,2.0
+JP,Alignment,COP,Sprint 19,2022,0.5
+JP,Tech Spec,ADLDS,Sprint 19,2022,5.0
+JP,Functional,DD,Sprint 19,2022,3.0
+JP,Functional,OP,Sprint 19,2022,3.0
+JP,Monitoring,COP,Sprint 20,2022,2.0
+JP,Tech Spec,ADLUS,Sprint 20,2022,4.0
+JP,Alerting,ADLUS,Sprint 20,2022,2.0
+JP,Monitoring,DD,Sprint 20,2022,3.0
+JP,Functional,ADLAE,Sprint 21,2022,1.0
+JP,Tech Spec,ADLAE,Sprint 21,2022,3.0
+JP,Alignment,ADLDS,Sprint 21,2022,0.5
+JP,Alerting,AS,Sprint 21,2022,2.0
+JP,Monitoring,AS,Sprint 21,2022,3.0
+JP,Tech Spec,ADLADL,Sprint 22,2022,5.0
+JP,Functional,ADLADL,Sprint 22,2022,2.0
+JP,Tech Spec,ADLSO,Sprint 22,2022,3.0
+JP,Monitoring,EOR,Sprint 23,2022,3.0
+JP,Alerting,NDO,Sprint 23,2022,2.0
+JP,Monitoring,NDO,Sprint 23,2022,3.0
+JP,Functional,ADLSO,Sprint 23,2022,2.0
+JP,Operational,OCT,Sprint 24,2022,1.0
+JP,Monitoring,OCT,Sprint 24,2022,3.0
+JP,Transition,DBE,Sprint 24,2022,3.0
+JP,Review,CPP,Sprint 24,2022,0.5
+JP,Monitoring,ADLSO,Sprint 24,2022,3.0
+JP,Alerting,SN,Sprint 25,2022,2.0
+JP,Tech Spec,CI,Sprint 25,2022,4.0
+JP,Tech Spec,Contacts,Sprint 25,2022,4.0
+JP,Review,AI,Sprint 25,2022,0.5
+JP,Monitoring,SN,Sprint 26,2022,3.0
+JP,Alerting,RC,Sprint 26,2022,2.0
+JP,Alignment,CPE,Sprint 26,2022,0.5
+JP,Transition,ADLSO,Sprint 26,2022,3.0
