@@ -14,8 +14,9 @@ df2 = pd.read_csv('sprint_wise_story_info.csv')
 
 st.sidebar.title('User Story Analysis')
 
-option = st.sidebar.selectbox('Select Any One', ['Top Scorer', 'Group Bar Plot', 'Highest Sprint grosser', 'Top 2 Story',
-                                                 'Tech-Func Story Expert', 'Alert-Monitoring Story Expert'])
+option = st.sidebar.selectbox('Select Any One', ['Top Scorer', 'Group Bar Plot', 'Highest Sprint grosser',
+                                                 'Top 2 Story', 'Tech-Func Story Expert',
+                                                 'Alert-Monitoring Story Expert', 'sum_of_storypoints_title_wise'])
 
 # 1. Top employee of 2022 : Total story points obtained by every individuals
 if option == 'Top Scorer':
@@ -135,4 +136,20 @@ elif option == 'Alert-Monitoring Story Expert':
 
         st.write('Showing dataframe')
         st.write(alert_monitor_df)
+
+# 7.Show all story points in all story title for all individuals
+elif option == 'sum_of_storypoints_title_wise':
+    st.sidebar.selectbox('Select individual', ['Sum of score story wise'])
+    btn7 = st.sidebar.button('Find Details')
+    if btn7:
+        st.title('Show all story points in all story title for all individuals')
+        sum_of_storypoints_title_wise = df1[['name', 'story_name', 'story_points']].groupby(['name', 'story_name'])[
+            'story_points'].sum()
+
+        temp_df = sum_of_storypoints_title_wise.reset_index()
+        st.write('Vizualized Data')
+        st.plotly_chart(px.bar(temp_df, x='story_name', y='story_points', color='name'))
+
+        st.write('Aggregate story points for all individuals')
+        st.write(sum_of_storypoints_title_wise)
 
