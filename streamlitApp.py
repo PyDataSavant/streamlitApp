@@ -5,7 +5,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 # !pip install plotly
-# import plotly.graph_objects as go
+import plotly.graph_objects as go
 import plotly.express as px
 
 
@@ -16,7 +16,9 @@ st.sidebar.title('User Story Analysis')
 
 option = st.sidebar.selectbox('Select Any One', ['Top Scorer', 'Group Bar Plot', 'Highest Sprint grosser',
                                                  'Top 2 Story', 'Tech-Func Story Expert',
-                                                 'Alert-Monitoring Story Expert', 'sum_of_storypoints_title_wise'])
+                                                 'Alert-Monitoring Story Expert',
+                                                 'sum_of_storypoints_title_wise',
+                                                 'Cumulative Story Points'])
 
 # 1. Top employee of 2022 : Total story points obtained by every individuals
 if option == 'Top Scorer':
@@ -153,3 +155,19 @@ elif option == 'sum_of_storypoints_title_wise':
         st.write('Aggregate story points for all individuals')
         st.write(sum_of_storypoints_title_wise)
 
+# 8.Heat Map showing the cumulative story points per individual per sprint
+elif option == 'Cumulative Story Points':
+    st.sidebar.selectbox('Select individual', ['Heat Map'])
+    btn8 = st.sidebar.button('Find Details')
+    if btn8:
+        st.title('Heat Map showing the cumulative story points per individual per sprint')
+        # create pivot table
+        pivot_table = df2.pivot_table(index='sprint_id', columns='name', values='story_points')
+
+        # plot pivot table as heatmap
+        fig = go.Figure(data=go.Heatmap(z=pivot_table.values, x=pivot_table.columns, y=pivot_table.index))
+        fig.update_layout(title='Story Points by Sprint and Name')
+        st.plotly_chart(fig)
+
+        st.write('Data showing as a pivot table')
+        st.write(pivot_table)
